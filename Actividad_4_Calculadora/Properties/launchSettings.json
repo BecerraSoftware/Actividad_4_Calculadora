@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Actividad_4_Calculadora": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
