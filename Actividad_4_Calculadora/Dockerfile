@@ -14,7 +14,7 @@ COPY ["Actividad_4_Calculadora/Actividad_4_Calculadora.csproj", "Actividad_4_Cal
 RUN dotnet restore "./Actividad_4_Calculadora/Actividad_4_Calculadora.csproj"
 COPY . .
 WORKDIR "/src/Actividad_4_Calculadora"
-RUN dotnet build "./Actividad_4_Calculadora.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./Actividad_4_Calculadora.csproj" -c " $BUILD_CONFIGURATION" -o /app/build
 
 # Esta fase se usa para publicar el proyecto de servicio que se copiará en la fase final.
 FROM build AS publish
