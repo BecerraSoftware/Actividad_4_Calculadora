@@ -1,4 +1,4 @@
-# Consulte https://aka.ms/customizecontainer para aprender a personalizar su contenedor de depuración y cómo Visual Studio usa este Dockerfile para compilar sus imágenes para una depuración más rápida.
+	# Consulte https://aka.ms/customizecontainer para aprender a personalizar su contenedor de depuración y cómo Visual Studio usa este Dockerfile para compilar sus imágenes para una depuración más rápida.
 
 # Esta fase se usa cuando se ejecuta desde VS en modo rápido (valor predeterminado para la configuración de depuración)
 FROM mcr.microsoft.com/dotnet/runtime:8.0 AS base
@@ -14,7 +14,7 @@ COPY ["Actividad_4_Calculadora/Actividad_4_Calculadora.csproj", "Actividad_4_Cal
 RUN dotnet restore "./Actividad_4_Calculadora/Actividad_4_Calculadora.csproj"
 COPY . .
 WORKDIR "/src/Actividad_4_Calculadora"
-RUN dotnet build "./Actividad_4_Calculadora.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./Actividad_4_Calculadora.csproj" -c " $BUILD_CONFIGURATION" -o /app/build
 
 # Esta fase se usa para publicar el proyecto de servicio que se copiará en la fase final.
 FROM build AS publish

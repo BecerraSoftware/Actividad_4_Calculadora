@@ -10,22 +10,22 @@ namespace Actividad_4_Calculadora.Clases
     {
         public double Dividir(double a, double b)
         {
-            throw new NotImplementedException();
+           return b == 0 ? throw new DivideByZeroException() : a / b;
         }
 
         public double Multiplicar(double a, double b)
         {
-            throw new NotImplementedException();
+            return a * b;
         }
 
         public double Restar(double a, double b)
         {
-            throw new NotImplementedException();
+            return a - b;
         }
 
         public double Sumar(double a, double b)
         {
-            throw new NotImplementedException();
+          return a + b;
         }
     }
 }
